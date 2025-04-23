@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Font in Use",
+  "version": "1.0",
+  "description": "Inject custom styles into specific pages.",
+  "permissions": ["management", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.fontsinuse.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
